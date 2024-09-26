@@ -1,0 +1,22 @@
+body {
+    background-color: #ece6f0;
+}
+.navbar {
+    background-color: rgb(86, 21, 86); /* Background color */
+    height: 60px; /* Height of the navbar */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Push button to the left, links to the right */
+    align-items: center; /* Vertically center items */
+    padding: 0 20px;
+}
+.navbar a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.navbar a:hover {
+    background-color: #c09bd8;
+    font-size: 15px;
+}

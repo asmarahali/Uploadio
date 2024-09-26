@@ -1,0 +1,36 @@
+.sidebar {
+    background-color: rgb(86, 21, 86); 
+    width: 150px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Arrange links vertically */
+    justify-content: flex-start; /* Align links at the top */
+    padding: 20px; /* Padding around the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: fixed; /* Fixed position on the left */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 10;
+}
+
+.sidebar a {
+    color: aliceblue; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding around links */
+    margin-bottom: 15px; /* Space between links */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.sidebar a:last-child {
+    margin-bottom: 0; /* Remove margin from the last link */
+}
+
+.sidebar a:hover {
+    background-color: #c09bd8; /* Background on hover */
+    font-size: 15px; /* Increase font size on hover */
+    transform: scale(1.05); /* Slightly enlarge link on hover */
+}
+i{
+    z-index: 10;
+}
