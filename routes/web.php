@@ -24,6 +24,7 @@ Route::get('/', function () {
 
 
 Route::middleware('auth')->group(function () {
+    
     Route::get('/dashboard', function () { return inertia('Dash'); })->name('dashboard');
     Route::get('/dashboard', [VideoController::class, 'dash'])->name('dashboard');
 
@@ -32,12 +33,17 @@ Route::middleware('auth')->group(function () {
     Route::post('/upload-video', [VideoController::class, 'upload'])->name('video.upload');
     Route::inertia('/upload', 'Upload');
 
-    Route::get('/videos/{video}/edit', [VideoController::class, 'edit'])->name('video.edit');
-    Route::inertia('/edit', 'Edit');
+    Route::get('/video/{id}', [VideoController::class, 'show'])->name('video.show');
+
+    Route::delete('/video/{id}', [VideoController::class, 'destroy'])->name('video.destroy');
+
+
+    Route::get('/video/{id}/edit', [VideoController::class, 'edit'])->name('video.edit');
+
+    Route::put('/video/{id}', [VideoController::class, 'update'])->name('video.update');
 
     Route::get('/all', [VideoController::class, 'all'])->name('video.all');
     Route::inertia('/all', 'AllVideos');
 
-   // Route::post('/upload-video', [VideoController::class, 'uploadVideo']);
 });
 
