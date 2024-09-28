@@ -1,3 +1,4 @@
+/* Main container for video and actions */
 .video-container {
     max-width: 800px;
     margin: 0 auto;
@@ -7,6 +8,7 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Video title styling */
 .video-title {
     font-size: 24px;
     font-weight: bold;
@@ -15,12 +17,14 @@
     margin-bottom: 20px;
 }
 
+/* Styling for the video player */
 .video-player {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
+/* Video description */
 .video-description {
     font-size: 16px;
     color: #555;
@@ -29,12 +33,14 @@
     line-height: 1.6;
 }
 
+/* Actions container for the edit and delete buttons */
 .video-actions {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+/* General button styling */
 .btn {
     padding: 10px 20px;
     border-radius: 5px;
@@ -43,13 +49,14 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     position: relative;
-    left: 35%;
     width: 80px;
+    left: 35%;
 }
 
+/* Edit button */
 .edit-btn {
-    background-color:rgb(139, 33, 139);
-    color: rgb(243, 234, 243);
+    background-color: rgb(139, 33, 139);
+    color: #f3eaf3;
 }
 
 .edit-btn:hover {
@@ -57,12 +64,89 @@
     transform: scale(1.05);
 }
 
+/* Delete button */
 .delete-btn {
     background-color: rgb(229, 168, 229);
     color: rgb(139, 33, 139);
 }
 
 .delete-btn:hover {
-    background-color:rgb(139, 33, 139);
+    background-color: rgb(139, 33, 139);
+    color: #fff;
     transform: scale(1.05);
+}
+
+/* Edit section container */
+.edit-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Simple fade-in animation for the edit section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form styling inside the edit section */
+.edit-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-section label {
+    font-weight: bold;
+    color: #333;
+}
+
+.edit-section input[type="text"],
+.edit-section textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Buttons in the edit section */
+.edit-section button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-section button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.edit-section button[type="button"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-section button[type="button"]:hover {
+    background-color: #e31b0c;
 }
